@@ -12,8 +12,8 @@ import java.io.InputStream;
 import java.util.Iterator;
 
 public class ExcelReader {
-    public static void readXLSXFile () throws IOException {
-        InputStream ExcelFileToRead = new FileInputStream("C:/Test.xlsx");
+    public static void readXLSXFile (String file) throws IOException {
+        InputStream ExcelFileToRead = new FileInputStream(file);
         XSSFWorkbook wb = new XSSFWorkbook(ExcelFileToRead);
 
         XSSFWorkbook test = new XSSFWorkbook();
@@ -39,6 +39,7 @@ public class ExcelReader {
                     //U Can Handel Boolean, Formula, Errors
                 }
             }
+
             System.out.println();
         }
 
